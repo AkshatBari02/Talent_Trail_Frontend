@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Context } from '../../index';
 import toast from 'react-hot-toast';
 import axios from 'axios';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FaRegUser } from 'react-icons/fa';
 import { MdOutlineMailOutline } from 'react-icons/md';
 import { RiLock2Fill } from 'react-icons/ri';
@@ -23,6 +23,7 @@ const Login = () => {
   const [password,setPassword] = useState("");
   const [role,setRole] = useState("");
   const [loading,setLoading] = useState(false);
+  const navigateTo = useNavigate();
 
 
   const {isAuthorized,setIsAuthorized,user,setUser} = useContext(Context);
@@ -63,7 +64,7 @@ const Login = () => {
 
 
   if(isAuthorized){
-    return <Navigate to={"/"}/>;
+    return navigateTo('/');
   }
   return (
     <>
