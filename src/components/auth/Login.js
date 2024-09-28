@@ -77,7 +77,7 @@ const Login = () => {
             isStopped={false}
             isPaused={false} 
             className='lottie'/>
-            <h5 style={{color:"green",textAlign:"center"}}>Please wait while we are registering you :)</h5>
+            <h5 style={{color:"green",textAlign:"center"}}>Please wait while we are signing in  you :)</h5>
       </>)
       :
       (<>
